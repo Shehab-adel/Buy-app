@@ -1,9 +1,11 @@
+import 'package:buy/presentation/resources/routes.dart';
+import 'package:buy/presentation/resources/theme_manager.dart';
 import 'package:flutter/material.dart';
 
 class BuyApp extends StatefulWidget {
-  BuyApp._internal();
+  const BuyApp._internal();
 
-  static final _instance = BuyApp._internal();
+  static const _instance = BuyApp._internal();
 
   factory BuyApp() => _instance;
 
@@ -14,6 +16,10 @@ class BuyApp extends StatefulWidget {
 class _BuyAppState extends State<BuyApp> {
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return MaterialApp(
+      onGenerateRoute: AppRouteGenerator.getRoute,
+      initialRoute: AppRoutes.splashRoute,
+      theme: getAppTheme(),
+    );
   }
 }

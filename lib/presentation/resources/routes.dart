@@ -7,7 +7,7 @@ import 'package:buy/presentation/splash/splash_view.dart';
 import 'package:buy/presentation/storeDetails/storeDetails_view.dart';
 import 'package:flutter/material.dart';
 
-class Routes {
+class AppRoutes {
   static const String splashRoute = '/';
   static const String loginRoute = '/login';
   static const String registerRoute = '/register';
@@ -16,20 +16,20 @@ class Routes {
   static const String storeDetailsRoute = '/storeDetails';
 }
 
-class RouteGenerator {
+class AppRouteGenerator {
   static Route<dynamic> getRoute(RouteSettings settings) {
     switch (settings.name) {
-      case Routes.splashRoute:
+      case AppRoutes.splashRoute:
         return MaterialPageRoute(builder: (_) => const SplashView());
-      case Routes.loginRoute:
+      case AppRoutes.loginRoute:
         return MaterialPageRoute(builder: (_) => const LoginView());
-      case Routes.registerRoute:
+      case AppRoutes.registerRoute:
         return MaterialPageRoute(builder: (_) => const RegisterView());
-      case Routes.forgetPasswordRoute:
+      case AppRoutes.forgetPasswordRoute:
         return MaterialPageRoute(builder: (_) => const ForgetPasswordView());
-      case Routes.mainRoute:
+      case AppRoutes.mainRoute:
         return MaterialPageRoute(builder: (_) => const MainView());
-      case Routes.storeDetailsRoute:
+      case AppRoutes.storeDetailsRoute:
         return MaterialPageRoute(builder: (_) => const StoreDetailsView());
       default:
         return undefinedRoute();
