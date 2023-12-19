@@ -1,8 +1,9 @@
-import 'package:buy/presentation/color_manager.dart';
-import 'package:buy/presentation/font_manager.dart';
-import 'package:buy/presentation/styles_manager.dart';
-import 'package:buy/presentation/value_manager.dart';
+import 'package:buy/presentation/resources/styles_manager.dart';
+import 'package:buy/presentation/resources/value_manager.dart';
 import 'package:flutter/material.dart';
+
+import 'color_manager.dart';
+import 'font_manager.dart';
 
 ThemeData getAppTheme() {
   return ThemeData(
@@ -22,10 +23,10 @@ ThemeData getAppTheme() {
           color: ColorManager.primary,
           elevation: AppSize.s4,
           shadowColor: ColorManager.lightPrimary,
-          titleTextStyle: TextStyle(
-              fontSize: FontSizeManager.s16,
-              color: ColorManager.white,
-              fontWeight: FontWeightManager.regular)),
+          titleTextStyle: getRegularStyle(
+            fontSize: FontSizeManager.s16,
+            color: ColorManager.white,
+          )),
       buttonTheme: ButtonThemeData(
           shape: const StadiumBorder(),
           disabledColor: ColorManager.f707070,
@@ -36,7 +37,7 @@ ThemeData getAppTheme() {
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(AppPadding.p12),
               ),
-              textStyle: TextStyle(
+              textStyle: getRegularStyle(
                   color: ColorManager.white, fontSize: FontSizeManager.s17),
               primary: ColorManager.primary)),
       //text theme
