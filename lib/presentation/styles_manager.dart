@@ -1,6 +1,5 @@
-import 'dart:ui';
-
 import 'package:buy/presentation/font_manager.dart';
+import 'package:flutter/material.dart';
 
 TextStyle _getTextStyle(double fontSize, FontWeight fontWeight, Color color) {
   return TextStyle(
@@ -11,7 +10,8 @@ TextStyle _getTextStyle(double fontSize, FontWeight fontWeight, Color color) {
 }
 
 //regular style
-TextStyle getRegularStyle(double fontSize, Color color) {
+TextStyle getRegularStyle(
+    {double fontSize = FontSizeManager.s12, required Color color}) {
   return _getTextStyle(fontSize, FontWeightManager.regular, color);
 }
 
