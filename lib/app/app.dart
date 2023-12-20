@@ -17,6 +17,7 @@ class _BuyAppState extends State<BuyApp> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       onGenerateRoute: AppRouteGenerator.getRoute,
       initialRoute: AppRoutes.splashRoute,
       theme: getAppTheme(),

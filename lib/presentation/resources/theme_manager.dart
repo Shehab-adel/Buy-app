@@ -42,12 +42,14 @@ ThemeData getAppTheme() {
               primary: ColorManager.primary)),
       //text theme
       textTheme: TextTheme(
-        displayLarge: getLightStyle(
-            color: ColorManager.white, fontSize: FontSizeManager.s22),
+        displayLarge: getSemiBoldStyle(
+            color: ColorManager.f525252, fontSize: FontSizeManager.s16),
         headlineLarge: getSemiBoldStyle(
             color: ColorManager.f525252, fontSize: FontSizeManager.s16),
+        headlineMedium: getRegularStyle(
+            color: ColorManager.f525252, fontSize: FontSizeManager.s14),
         titleMedium: getMediumStyle(
-            color: ColorManager.f9E9E9E, fontSize: FontSizeManager.s14),
+            color: ColorManager.primary, fontSize: FontSizeManager.s16),
         bodyLarge: getRegularStyle(color: ColorManager.f707070),
         bodySmall: getRegularStyle(color: ColorManager.f737477),
       ),
